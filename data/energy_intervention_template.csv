@@ -1,0 +1,4 @@
+intervention,power_kw,hours_per_day,days,efficiency_percent
+water_pumping,2.0,4,30,85
+solar_pump,3.0,5,30,90
+field_monitoring,0.1,2,30,95

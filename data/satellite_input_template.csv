@@ -1,0 +1,3 @@
+site_id,ndvi,ndwi,dem_m,slope_percent,rainfall_mm
+A001,0.68,0.35,420,4.2,820
+A002,0.42,0.18,455,9.5,760

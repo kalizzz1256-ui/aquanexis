@@ -1,0 +1,5 @@
+site_id,latitude,longitude,area_ha,slope_percent,annual_rainfall_mm,water_index,priority
+A001,11.0001,76.0001,12.5,4.2,820,0.68,High
+A002,11.0120,76.0210,8.3,9.5,760,0.42,Medium
+A003,10.9850,76.0450,15.2,3.1,910,0.75,High
+A004,11.0300,76.0600,6.7,14.0,690,0.30,Low
