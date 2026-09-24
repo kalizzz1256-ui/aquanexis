@@ -151,10 +151,10 @@ const WATERSHED_DB = {
     ]
   },
 
-  /* ── Major Dam Catchments ── */
+  /* ── Karnataka Dams ── */
   krs_dam: {
     name: "KRS Dam — Cauvery Reservoir", label: "KRS Dam – Krishnarajasagara (KA)",
-    group: "Major Dam Catchments",
+    group: "Karnataka Dams",
     id: "DAM-KA-MYS-KRS", center: [12.424, 76.572],
     area_ha: 13800, rainfall_mm: 758, avg_slope: 3.2, soil_group: "B", curve_number: 71,
     boundary: [[12.445,76.550],[12.455,76.590],[12.435,76.605],[12.410,76.592],[12.400,76.558],[12.425,76.545],[12.445,76.550]],
@@ -171,9 +171,10 @@ const WATERSHED_DB = {
     ]
   },
 
+  /* ── Tamil Nadu Dams ── */
   amaravathy_dam: {
-    name: "Amaravathy Dam Catchment", label: "Amaravathy Dam (TN-0031) — 3 TMC",
-    group: "Major Dam Catchments",
+    name: "Amaravathy Dam Catchment", label: "Amaravathy Dam (TN-Karur) — 3 TMC",
+    group: "Tamil Nadu Dams",
     id: "DAM-TN-KRR-AMV", center: [10.418, 77.118],
     area_ha: 931, rainfall_mm: 920, avg_slope: 6.4, soil_group: "B", curve_number: 74,
     boundary: [[10.435,77.095],[10.442,77.130],[10.422,77.148],[10.400,77.135],[10.392,77.105],[10.415,77.090],[10.435,77.095]],
@@ -191,8 +192,8 @@ const WATERSHED_DB = {
   },
 
   bhavani_sagar: {
-    name: "Bhavani Sagar Dam Catchment", label: "Bhavani Sagar Dam (TN-ERO) — 32.8 TMC",
-    group: "Major Dam Catchments",
+    name: "Bhavani Sagar Dam Catchment", label: "Bhavani Sagar Dam (TN-Erode) — 32.8 TMC",
+    group: "Tamil Nadu Dams",
     id: "DAM-TN-ERO-BVS", center: [11.472, 77.185],
     area_ha: 18500, rainfall_mm: 880, avg_slope: 5.1, soil_group: "B", curve_number: 72,
     boundary: [[11.495,77.158],[11.510,77.200],[11.480,77.220],[11.450,77.205],[11.440,77.168],[11.468,77.152],[11.495,77.158]],
@@ -206,6 +207,502 @@ const WATERSHED_DB = {
       { id:"BVS-02", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[11.490,77.175], capacity:2600,    cost:240000,  recharge:7800,     status:"Ongoing"   },
       { id:"BVS-03", type:"Loose Boulder Gully Plug",  zone:"Ridge",       order:1, coords:[11.504,77.165], capacity:800,     cost:52000,   recharge:2400,     status:"Proposed"  },
       { id:"BVS-04", type:"Earthen Percolation Tank",  zone:"Valley Floor", order:3, coords:[11.455,77.198], capacity:11000,   cost:760000,  recharge:33000,    status:"Proposed"  }
+    ]
+  },
+
+  mettur_dam: {
+    name: "Mettur Dam (Stanley Reservoir)", label: "Mettur Dam (TN-Salem) — 93.47 TMC",
+    group: "Tamil Nadu Dams",
+    id: "DAM-TN-SLM-MTR", center: [11.786, 77.801],
+    area_ha: 75000, rainfall_mm: 720, avg_slope: 3.8, soil_group: "B", curve_number: 70,
+    boundary: [[11.810,77.772],[11.825,77.818],[11.798,77.838],[11.765,77.822],[11.756,77.782],[11.778,77.765],[11.810,77.772]],
+    streams: [
+      { order: 3, coords: [[11.818,77.785],[11.800,77.795],[11.786,77.801],[11.768,77.814]] },
+      { order: 2, coords: [[11.822,77.812],[11.806,77.804],[11.786,77.801]] },
+      { order: 1, coords: [[11.770,77.775],[11.786,77.801]] }
+    ],
+    interventions: [
+      { id:"MTR-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[11.786,77.801], capacity:9347000, cost:0,        recharge:280410000, status:"Completed" },
+      { id:"MTR-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[11.768,77.818], capacity:25000,   cost:1750000,  recharge:75000,     status:"Proposed"  },
+      { id:"MTR-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[11.804,77.792], capacity:5200,    cost:380000,   recharge:15600,     status:"Ongoing"   }
+    ]
+  },
+
+  vaigai_dam: {
+    name: "Vaigai Dam Catchment", label: "Vaigai Dam (TN-Madurai) — 71 TMC",
+    group: "Tamil Nadu Dams",
+    id: "DAM-TN-MDU-VGI", center: [9.980, 77.540],
+    area_ha: 9900, rainfall_mm: 840, avg_slope: 7.2, soil_group: "B", curve_number: 74,
+    boundary: [[10.000,77.515],[10.014,77.552],[9.992,77.572],[9.965,77.558],[9.956,77.520],[9.978,77.505],[10.000,77.515]],
+    streams: [
+      { order: 3, coords: [[10.008,77.528],[9.992,77.538],[9.980,77.540],[9.965,77.552]] },
+      { order: 2, coords: [[10.012,77.548],[9.996,77.542],[9.980,77.540]] },
+      { order: 1, coords: [[9.968,77.522],[9.980,77.540]] }
+    ],
+    interventions: [
+      { id:"VGI-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[9.980,77.540], capacity:7100000, cost:0,       recharge:213000000, status:"Completed" },
+      { id:"VGI-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[9.963,77.554], capacity:16000,   cost:1120000, recharge:48000,     status:"Proposed"  },
+      { id:"VGI-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[9.995,77.532], capacity:3800,    cost:280000,  recharge:11400,     status:"Proposed"  }
+    ]
+  },
+
+  papanasam_dam: {
+    name: "Papanasam Dam Catchment (Manimuthar)", label: "Papanasam Dam (TN-Tirunelveli) — 14 TMC",
+    group: "Tamil Nadu Dams",
+    id: "DAM-TN-TVL-PPN", center: [8.820, 77.372],
+    area_ha: 11200, rainfall_mm: 1380, avg_slope: 9.5, soil_group: "A", curve_number: 62,
+    boundary: [[8.842,77.345],[8.858,77.385],[8.830,77.408],[8.798,77.392],[8.788,77.352],[8.812,77.330],[8.842,77.345]],
+    streams: [
+      { order: 3, coords: [[8.850,77.358],[8.834,77.368],[8.820,77.372],[8.804,77.384]] },
+      { order: 2, coords: [[8.855,77.378],[8.838,77.374],[8.820,77.372]] },
+      { order: 1, coords: [[8.806,77.353],[8.820,77.372]] }
+    ],
+    interventions: [
+      { id:"PPN-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[8.820,77.372], capacity:1400000, cost:0,       recharge:42000000, status:"Completed" },
+      { id:"PPN-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[8.803,77.388], capacity:10000,   cost:700000,  recharge:30000,    status:"Proposed"  },
+      { id:"PPN-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[8.836,77.365], capacity:3200,    cost:235000,  recharge:9600,     status:"Ongoing"   }
+    ]
+  },
+
+  /* ── Karnataka Dams (additional) ── */
+  tungabhadra_dam: {
+    name: "Tungabhadra Dam Catchment", label: "Tungabhadra Dam (KA-Hospet) — 101 TMC",
+    group: "Karnataka Dams",
+    id: "DAM-KA-BLR-TBD", center: [15.272, 76.334],
+    area_ha: 28000, rainfall_mm: 620, avg_slope: 4.1, soil_group: "B", curve_number: 73,
+    boundary: [[15.295,76.308],[15.310,76.348],[15.285,76.372],[15.252,76.358],[15.242,76.318],[15.268,76.300],[15.295,76.308]],
+    streams: [
+      { order: 3, coords: [[15.302,76.320],[15.285,76.330],[15.272,76.334],[15.258,76.345]] },
+      { order: 2, coords: [[15.308,76.345],[15.292,76.338],[15.272,76.334]] },
+      { order: 1, coords: [[15.258,76.312],[15.272,76.334]] }
+    ],
+    interventions: [
+      { id:"TBD-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[15.272,76.334], capacity:10100000, cost:0,       recharge:303000000, status:"Completed" },
+      { id:"TBD-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[15.255,76.350], capacity:18000,    cost:1200000, recharge:54000,     status:"Ongoing"   },
+      { id:"TBD-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[15.290,76.322], capacity:4200,     cost:310000,  recharge:12600,     status:"Proposed"  }
+    ]
+  },
+
+  linganamakki_dam: {
+    name: "Linganamakki Dam Catchment", label: "Linganamakki Dam (KA-Shivamogga) — 151 TMC",
+    group: "Karnataka Dams",
+    id: "DAM-KA-SMG-LNG", center: [14.175, 74.860],
+    area_ha: 42000, rainfall_mm: 2200, avg_slope: 12.5, soil_group: "A", curve_number: 58,
+    boundary: [[14.200,74.830],[14.218,74.878],[14.192,74.902],[14.155,74.888],[14.144,74.842],[14.168,74.818],[14.200,74.830]],
+    streams: [
+      { order: 3, coords: [[14.210,74.845],[14.192,74.858],[14.175,74.860],[14.160,74.872]] },
+      { order: 2, coords: [[14.215,74.872],[14.198,74.864],[14.175,74.860]] },
+      { order: 1, coords: [[14.162,74.835],[14.175,74.860]] }
+    ],
+    interventions: [
+      { id:"LNG-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[14.175,74.860], capacity:15100000, cost:0,        recharge:453000000, status:"Completed" },
+      { id:"LNG-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[14.158,74.876], capacity:22000,    cost:1550000,  recharge:66000,     status:"Proposed"  },
+      { id:"LNG-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[14.194,74.852], capacity:5600,     cost:420000,   recharge:16800,     status:"Ongoing"   }
+    ]
+  },
+
+  harangi_dam: {
+    name: "Harangi Dam Catchment", label: "Harangi Dam (KA-Coorg) — 8.5 TMC",
+    group: "Karnataka Dams",
+    id: "DAM-KA-CDG-HRG", center: [12.542, 75.960],
+    area_ha: 9200, rainfall_mm: 1650, avg_slope: 9.8, soil_group: "A", curve_number: 62,
+    boundary: [[12.562,75.935],[12.576,75.972],[12.552,75.992],[12.525,75.978],[12.516,75.942],[12.535,75.928],[12.562,75.935]],
+    streams: [
+      { order: 3, coords: [[12.570,75.950],[12.555,75.960],[12.542,75.960],[12.528,75.972]] },
+      { order: 2, coords: [[12.574,75.975],[12.560,75.965],[12.542,75.960]] },
+      { order: 1, coords: [[12.528,75.942],[12.542,75.960]] }
+    ],
+    interventions: [
+      { id:"HRG-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[12.542,75.960], capacity:850000,  cost:0,       recharge:25500000, status:"Completed" },
+      { id:"HRG-02", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[12.558,75.952], capacity:2800,    cost:215000,  recharge:8400,     status:"Proposed"  },
+      { id:"HRG-03", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[12.528,75.975], capacity:9200,    cost:645000,  recharge:27600,    status:"Ongoing"   }
+    ]
+  },
+
+  hemavathi_dam: {
+    name: "Hemavathi Reservoir Catchment", label: "Hemavathi Dam (KA-Hassan) — 37.1 TMC",
+    group: "Karnataka Dams",
+    id: "DAM-KA-HSN-HMV", center: [13.042, 76.002],
+    area_ha: 15600, rainfall_mm: 920, avg_slope: 6.2, soil_group: "B", curve_number: 72,
+    boundary: [[13.062,75.978],[13.076,76.018],[13.052,76.038],[13.025,76.024],[13.016,75.985],[13.035,75.970],[13.062,75.978]],
+    streams: [
+      { order: 3, coords: [[13.070,75.990],[13.055,76.000],[13.042,76.002],[13.028,76.014]] },
+      { order: 2, coords: [[13.074,76.015],[13.058,76.008],[13.042,76.002]] },
+      { order: 1, coords: [[13.028,75.982],[13.042,76.002]] }
+    ],
+    interventions: [
+      { id:"HMV-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[13.042,76.002], capacity:3710000, cost:0,        recharge:111300000, status:"Completed" },
+      { id:"HMV-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[13.025,76.018], capacity:14000,   cost:980000,   recharge:42000,     status:"Proposed"  },
+      { id:"HMV-03", type:"Continuous Contour Trench",  zone:"Ridge",       order:1, coords:[13.072,75.988], capacity:3200,    cost:160000,   recharge:9600,      status:"Proposed"  }
+    ]
+  },
+
+  kabini_dam: {
+    name: "Kabini Reservoir Catchment", label: "Kabini Dam (KA-Mysuru) — 19.52 TMC",
+    group: "Karnataka Dams",
+    id: "DAM-KA-MYS-KBN", center: [11.985, 76.340],
+    area_ha: 18800, rainfall_mm: 1120, avg_slope: 8.2, soil_group: "A", curve_number: 65,
+    boundary: [[12.008,76.312],[12.022,76.354],[11.995,76.375],[11.962,76.360],[11.952,76.320],[11.975,76.298],[12.008,76.312]],
+    streams: [
+      { order: 3, coords: [[12.018,76.325],[12.000,76.335],[11.985,76.340],[11.968,76.352]] },
+      { order: 2, coords: [[12.021,76.346],[12.004,76.341],[11.985,76.340]] },
+      { order: 1, coords: [[11.970,76.322],[11.985,76.340]] }
+    ],
+    interventions: [
+      { id:"KBN-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[11.985,76.340], capacity:1952000, cost:0,        recharge:58560000, status:"Completed" },
+      { id:"KBN-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[11.968,76.356], capacity:12000,   cost:840000,   recharge:36000,    status:"Proposed"  },
+      { id:"KBN-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[12.002,76.332], capacity:3500,    cost:258000,   recharge:10500,    status:"Ongoing"   }
+    ]
+  },
+
+  /* ── AP & Telangana Dams ── */
+  nagarjuna_sagar: {
+    name: "Nagarjuna Sagar Dam Catchment", label: "Nagarjuna Sagar Dam (AP/TG) — 11.475 BCM",
+    group: "AP & Telangana Dams",
+    id: "DAM-AP-NGS-NJS", center: [16.574, 79.318],
+    area_ha: 2140000, rainfall_mm: 875, avg_slope: 2.8, soil_group: "B", curve_number: 68,
+    boundary: [[16.600,79.285],[16.622,79.338],[16.592,79.362],[16.552,79.345],[16.540,79.295],[16.568,79.272],[16.600,79.285]],
+    streams: [
+      { order: 3, coords: [[16.612,79.300],[16.590,79.312],[16.574,79.318],[16.558,79.332]] },
+      { order: 2, coords: [[16.618,79.330],[16.598,79.322],[16.574,79.318]] },
+      { order: 1, coords: [[16.560,79.290],[16.574,79.318]] }
+    ],
+    interventions: [
+      { id:"NJS-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[16.574,79.318], capacity:11475000000, cost:0,        recharge:344250000, status:"Completed" },
+      { id:"NJS-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[16.555,79.340], capacity:45000,       cost:3150000,  recharge:135000,    status:"Proposed"  },
+      { id:"NJS-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[16.595,79.310], capacity:8500,        cost:625000,   recharge:25500,     status:"Ongoing"   }
+    ]
+  },
+
+  srisailam_dam: {
+    name: "Srisailam Reservoir Catchment", label: "Srisailam Dam (AP/TG) — 215.8 TMC",
+    group: "AP & Telangana Dams",
+    id: "DAM-AP-KNL-SSL", center: [16.094, 78.898],
+    area_ha: 820000, rainfall_mm: 780, avg_slope: 4.2, soil_group: "B", curve_number: 71,
+    boundary: [[16.118,78.868],[16.136,78.914],[16.105,78.938],[16.068,78.922],[16.058,78.875],[16.082,78.852],[16.118,78.868]],
+    streams: [
+      { order: 3, coords: [[16.128,78.882],[16.110,78.892],[16.094,78.898],[16.078,78.910]] },
+      { order: 2, coords: [[16.134,78.908],[16.114,78.902],[16.094,78.898]] },
+      { order: 1, coords: [[16.080,78.872],[16.094,78.898]] }
+    ],
+    interventions: [
+      { id:"SSL-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[16.094,78.898], capacity:21580000, cost:0,        recharge:647400000, status:"Completed" },
+      { id:"SSL-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[16.076,78.915], capacity:32000,    cost:2240000,  recharge:96000,     status:"Proposed"  },
+      { id:"SSL-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[16.112,78.888], capacity:6200,     cost:455000,   recharge:18600,     status:"Ongoing"   }
+    ]
+  },
+
+  pochampad_dam: {
+    name: "Pochampad Dam Catchment (Sriram Sagar)", label: "Sriram Sagar Dam (TG-Nizamabad) — 90.5 TMC",
+    group: "AP & Telangana Dams",
+    id: "DAM-TG-NZB-SRS", center: [18.972, 78.318],
+    area_ha: 922000, rainfall_mm: 880, avg_slope: 3.5, soil_group: "C", curve_number: 80,
+    boundary: [[18.996,78.290],[19.012,78.330],[18.982,78.352],[18.950,78.336],[18.940,78.297],[18.962,78.275],[18.996,78.290]],
+    streams: [
+      { order: 3, coords: [[19.006,78.304],[18.988,78.314],[18.972,78.318],[18.956,78.330]] },
+      { order: 2, coords: [[19.010,78.324],[18.992,78.320],[18.972,78.318]] },
+      { order: 1, coords: [[18.958,78.298],[18.972,78.318]] }
+    ],
+    interventions: [
+      { id:"SRS-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[18.972,78.318], capacity:9050000, cost:0,        recharge:271500000, status:"Completed" },
+      { id:"SRS-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[18.954,78.334], capacity:28000,   cost:1960000,  recharge:84000,     status:"Proposed"  },
+      { id:"SRS-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[18.990,78.310], capacity:6000,    cost:440000,   recharge:18000,     status:"Ongoing"   }
+    ]
+  },
+
+  /* ── Maharashtra Dams ── */
+  jayakwadi_dam: {
+    name: "Jayakwadi Dam Catchment", label: "Jayakwadi Dam (MH-Aurangabad) — 2,909 MCM",
+    group: "Maharashtra Dams",
+    id: "DAM-MH-AUR-JYK", center: [19.502, 75.488],
+    area_ha: 920000, rainfall_mm: 645, avg_slope: 2.5, soil_group: "C", curve_number: 83,
+    boundary: [[19.525,75.460],[19.542,75.502],[19.512,75.524],[19.478,75.508],[19.468,75.468],[19.492,75.448],[19.525,75.460]],
+    streams: [
+      { order: 3, coords: [[19.535,75.472],[19.515,75.482],[19.502,75.488],[19.486,75.500]] },
+      { order: 2, coords: [[19.540,75.498],[19.520,75.492],[19.502,75.488]] },
+      { order: 1, coords: [[19.488,75.465],[19.502,75.488]] }
+    ],
+    interventions: [
+      { id:"JYK-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[19.502,75.488], capacity:2909000, cost:0,        recharge:87270000, status:"Completed" },
+      { id:"JYK-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[19.484,75.505], capacity:28000,   cost:1960000,  recharge:84000,    status:"Proposed"  },
+      { id:"JYK-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[19.518,75.480], capacity:6800,    cost:500000,   recharge:20400,    status:"Ongoing"   }
+    ]
+  },
+
+  koyna_dam: {
+    name: "Koyna Dam Catchment", label: "Koyna Dam (MH-Satara) — 105.25 TMC",
+    group: "Maharashtra Dams",
+    id: "DAM-MH-SAT-KYN", center: [17.399, 73.749],
+    area_ha: 89000, rainfall_mm: 3200, avg_slope: 15.2, soil_group: "A", curve_number: 55,
+    boundary: [[17.422,73.720],[17.438,73.762],[17.410,73.784],[17.378,73.768],[17.368,73.728],[17.390,73.710],[17.422,73.720]],
+    streams: [
+      { order: 3, coords: [[17.432,73.734],[17.415,73.744],[17.399,73.749],[17.382,73.762]] },
+      { order: 2, coords: [[17.436,73.758],[17.418,73.752],[17.399,73.749]] },
+      { order: 1, coords: [[17.384,73.724],[17.399,73.749]] }
+    ],
+    interventions: [
+      { id:"KYN-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[17.399,73.749], capacity:10525000, cost:0,        recharge:315750000, status:"Completed" },
+      { id:"KYN-02", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[17.415,73.742], capacity:4800,     cost:355000,   recharge:14400,     status:"Proposed"  },
+      { id:"KYN-03", type:"Continuous Contour Trench",  zone:"Ridge",       order:1, coords:[17.430,73.730], capacity:3800,     cost:190000,   recharge:11400,     status:"Proposed"  }
+    ]
+  },
+
+  ujani_dam: {
+    name: "Ujani Dam Catchment", label: "Ujani Dam (MH-Solapur) — 117.26 TMC",
+    group: "Maharashtra Dams",
+    id: "DAM-MH-SLR-UJN", center: [18.084, 75.118],
+    area_ha: 1400000, rainfall_mm: 580, avg_slope: 1.5, soil_group: "D", curve_number: 88,
+    boundary: [[18.108,75.090],[18.125,75.130],[18.095,75.152],[18.062,75.136],[18.052,75.097],[18.075,75.076],[18.108,75.090]],
+    streams: [
+      { order: 3, coords: [[18.118,75.103],[18.100,75.112],[18.084,75.118],[18.068,75.130]] },
+      { order: 2, coords: [[18.122,75.124],[18.104,75.118],[18.084,75.118]] },
+      { order: 1, coords: [[18.070,75.096],[18.084,75.118]] }
+    ],
+    interventions: [
+      { id:"UJN-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[18.084,75.118], capacity:11726000, cost:0,        recharge:351780000, status:"Completed" },
+      { id:"UJN-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[18.066,75.134], capacity:32000,    cost:2240000,  recharge:96000,     status:"Ongoing"   },
+      { id:"UJN-03", type:"Gully Plug",                 zone:"Mid-Slope",   order:2, coords:[18.102,75.108], capacity:1200,     cost:85000,    recharge:3600,      status:"Proposed"  }
+    ]
+  },
+
+  /* ── Rajasthan Dams ── */
+  rana_pratap_sagar: {
+    name: "Rana Pratap Sagar Dam Catchment", label: "Rana Pratap Sagar (RJ-Rawatbhata) — 2,900 MCM",
+    group: "Rajasthan Dams",
+    id: "DAM-RJ-CIT-RPS", center: [24.930, 75.578],
+    area_ha: 840000, rainfall_mm: 725, avg_slope: 3.5, soil_group: "B", curve_number: 74,
+    boundary: [[24.952,75.550],[24.968,75.592],[24.940,75.614],[24.908,75.598],[24.898,75.558],[24.922,75.538],[24.952,75.550]],
+    streams: [
+      { order: 3, coords: [[24.962,75.564],[24.944,75.574],[24.930,75.578],[24.914,75.590]] },
+      { order: 2, coords: [[24.966,75.585],[24.948,75.580],[24.930,75.578]] },
+      { order: 1, coords: [[24.916,75.556],[24.930,75.578]] }
+    ],
+    interventions: [
+      { id:"RPS-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[24.930,75.578], capacity:2900000, cost:0,        recharge:87000000, status:"Completed" },
+      { id:"RPS-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[24.912,75.594], capacity:26000,   cost:1820000,  recharge:78000,    status:"Proposed"  },
+      { id:"RPS-03", type:"Continuous Contour Trench",  zone:"Ridge",       order:1, coords:[24.964,75.562], capacity:3600,    cost:180000,   recharge:10800,    status:"Proposed"  }
+    ]
+  },
+
+  bisalpur_dam: {
+    name: "Bisalpur Dam Catchment", label: "Bisalpur Dam (RJ-Tonk) — 1,088 MCM",
+    group: "Rajasthan Dams",
+    id: "DAM-RJ-TNK-BSL", center: [25.845, 75.520],
+    area_ha: 520000, rainfall_mm: 680, avg_slope: 2.8, soil_group: "C", curve_number: 82,
+    boundary: [[25.868,75.494],[25.882,75.534],[25.855,75.556],[25.822,75.540],[25.812,75.500],[25.836,75.480],[25.868,75.494]],
+    streams: [
+      { order: 3, coords: [[25.878,75.508],[25.860,75.518],[25.845,75.520],[25.829,75.532]] },
+      { order: 2, coords: [[25.880,75.528],[25.864,75.524],[25.845,75.520]] },
+      { order: 1, coords: [[25.831,75.498],[25.845,75.520]] }
+    ],
+    interventions: [
+      { id:"BSL-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[25.845,75.520], capacity:1088000, cost:0,        recharge:32640000, status:"Completed" },
+      { id:"BSL-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[25.827,75.536], capacity:20000,   cost:1400000,  recharge:60000,    status:"Ongoing"   },
+      { id:"BSL-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[25.862,75.512], capacity:4500,    cost:332000,   recharge:13500,    status:"Proposed"  }
+    ]
+  },
+
+  /* ── Madhya Pradesh Dams ── */
+  bargi_dam: {
+    name: "Bargi Dam Catchment (Rani Avantibai Sagar)", label: "Bargi Dam (MP-Jabalpur) — 3,425 MCM",
+    group: "Madhya Pradesh Dams",
+    id: "DAM-MP-JBL-BRG", center: [22.975, 79.958],
+    area_ha: 1470000, rainfall_mm: 1250, avg_slope: 4.2, soil_group: "B", curve_number: 72,
+    boundary: [[22.998,79.930],[23.015,79.972],[22.985,79.994],[22.952,79.978],[22.942,79.938],[22.966,79.916],[22.998,79.930]],
+    streams: [
+      { order: 3, coords: [[23.008,79.944],[22.990,79.954],[22.975,79.958],[22.959,79.970]] },
+      { order: 2, coords: [[23.012,79.966],[22.994,79.960],[22.975,79.958]] },
+      { order: 1, coords: [[22.961,79.934],[22.975,79.958]] }
+    ],
+    interventions: [
+      { id:"BRG-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[22.975,79.958], capacity:3425000, cost:0,        recharge:102750000, status:"Completed" },
+      { id:"BRG-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[22.957,79.974], capacity:35000,   cost:2450000,  recharge:105000,    status:"Proposed"  },
+      { id:"BRG-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[22.992,79.950], capacity:7200,    cost:530000,   recharge:21600,     status:"Ongoing"   }
+    ]
+  },
+
+  bansagar_dam: {
+    name: "Bansagar Dam Catchment", label: "Bansagar Dam (MP-Shahdol) — 5,410 MCM",
+    group: "Madhya Pradesh Dams",
+    id: "DAM-MP-SDL-BNS", center: [24.198, 81.268],
+    area_ha: 1080000, rainfall_mm: 1020, avg_slope: 5.8, soil_group: "B", curve_number: 73,
+    boundary: [[24.222,81.240],[24.238,81.282],[24.208,81.304],[24.175,81.288],[24.165,81.248],[24.188,81.226],[24.222,81.240]],
+    streams: [
+      { order: 3, coords: [[24.232,81.254],[24.214,81.264],[24.198,81.268],[24.182,81.280]] },
+      { order: 2, coords: [[24.236,81.275],[24.218,81.270],[24.198,81.268]] },
+      { order: 1, coords: [[24.184,81.246],[24.198,81.268]] }
+    ],
+    interventions: [
+      { id:"BNS-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[24.198,81.268], capacity:5410000, cost:0,        recharge:162300000, status:"Completed" },
+      { id:"BNS-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[24.180,81.284], capacity:28000,   cost:1960000,  recharge:84000,     status:"Proposed"  },
+      { id:"BNS-03", type:"Continuous Contour Trench",  zone:"Ridge",       order:1, coords:[24.234,81.252], capacity:4800,    cost:240000,   recharge:14400,     status:"Proposed"  }
+    ]
+  },
+
+  /* ── Gujarat Dams ── */
+  sardar_sarovar: {
+    name: "Sardar Sarovar Dam Catchment", label: "Sardar Sarovar (GJ-Narmada) — 9,210 MCM",
+    group: "Gujarat Dams",
+    id: "DAM-GJ-NRM-SSP", center: [21.832, 73.742],
+    area_ha: 8800000, rainfall_mm: 885, avg_slope: 3.2, soil_group: "B", curve_number: 70,
+    boundary: [[21.858,73.712],[21.875,73.755],[21.845,73.778],[21.812,73.762],[21.800,73.720],[21.825,73.698],[21.858,73.712]],
+    streams: [
+      { order: 3, coords: [[21.868,73.726],[21.850,73.736],[21.832,73.742],[21.815,73.754]] },
+      { order: 2, coords: [[21.872,73.748],[21.854,73.744],[21.832,73.742]] },
+      { order: 1, coords: [[21.818,73.718],[21.832,73.742]] }
+    ],
+    interventions: [
+      { id:"SSP-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[21.832,73.742], capacity:9210000, cost:0,         recharge:276300000, status:"Completed" },
+      { id:"SSP-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[21.814,73.758], capacity:50000,   cost:3500000,   recharge:150000,    status:"Proposed"  },
+      { id:"SSP-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[21.852,73.734], capacity:9500,    cost:700000,    recharge:28500,     status:"Ongoing"   }
+    ]
+  },
+
+  ukai_dam: {
+    name: "Ukai Dam Catchment", label: "Ukai Dam (GJ-Surat) — 7,442 MCM",
+    group: "Gujarat Dams",
+    id: "DAM-GJ-SRT-UKI", center: [21.248, 73.566],
+    area_ha: 620000, rainfall_mm: 1150, avg_slope: 3.8, soil_group: "B", curve_number: 71,
+    boundary: [[21.272,73.538],[21.288,73.580],[21.258,73.602],[21.225,73.586],[21.215,73.545],[21.238,73.523],[21.272,73.538]],
+    streams: [
+      { order: 3, coords: [[21.282,73.552],[21.264,73.562],[21.248,73.566],[21.232,73.578]] },
+      { order: 2, coords: [[21.286,73.573],[21.268,73.568],[21.248,73.566]] },
+      { order: 1, coords: [[21.235,73.545],[21.248,73.566]] }
+    ],
+    interventions: [
+      { id:"UKI-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[21.248,73.566], capacity:7442000, cost:0,        recharge:223260000, status:"Completed" },
+      { id:"UKI-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[21.230,73.582], capacity:38000,   cost:2660000,  recharge:114000,    status:"Proposed"  },
+      { id:"UKI-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[21.265,73.558], capacity:7800,    cost:575000,   recharge:23400,     status:"Ongoing"   }
+    ]
+  },
+
+  /* ── Odisha Dams ── */
+  hirakud_dam: {
+    name: "Hirakud Dam Catchment", label: "Hirakud Dam (OD-Sambalpur) — 8,136 MCM",
+    group: "Odisha Dams",
+    id: "DAM-OD-SBP-HRK", center: [21.525, 83.878],
+    area_ha: 8340000, rainfall_mm: 1420, avg_slope: 4.5, soil_group: "B", curve_number: 72,
+    boundary: [[21.548,83.848],[21.565,83.892],[21.535,83.916],[21.502,83.900],[21.492,83.858],[21.515,83.835],[21.548,83.848]],
+    streams: [
+      { order: 3, coords: [[21.558,83.862],[21.540,83.872],[21.525,83.878],[21.508,83.890]] },
+      { order: 2, coords: [[21.562,83.883],[21.544,83.878],[21.525,83.878]] },
+      { order: 1, coords: [[21.510,83.855],[21.525,83.878]] }
+    ],
+    interventions: [
+      { id:"HRK-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[21.525,83.878], capacity:8136000, cost:0,        recharge:244080000, status:"Completed" },
+      { id:"HRK-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[21.506,83.894], capacity:42000,   cost:2940000,  recharge:126000,    status:"Proposed"  },
+      { id:"HRK-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[21.542,83.870], capacity:8800,    cost:648000,   recharge:26400,     status:"Ongoing"   }
+    ]
+  },
+
+  /* ── Punjab & Himachal Pradesh Dams ── */
+  bhakra_nangal: {
+    name: "Bhakra Nangal Dam Catchment (Gobind Sagar)", label: "Bhakra Nangal Dam (HP-Bilaspur) — 7,200 MCM",
+    group: "Punjab & HP Dams",
+    id: "DAM-HP-BLS-BNL", center: [31.420, 76.432],
+    area_ha: 3590000, rainfall_mm: 1100, avg_slope: 8.5, soil_group: "A", curve_number: 62,
+    boundary: [[31.445,76.402],[31.462,76.445],[31.432,76.468],[31.400,76.452],[31.388,76.410],[31.412,76.388],[31.445,76.402]],
+    streams: [
+      { order: 3, coords: [[31.455,76.416],[31.438,76.426],[31.420,76.432],[31.404,76.444]] },
+      { order: 2, coords: [[31.460,76.438],[31.442,76.432],[31.420,76.432]] },
+      { order: 1, coords: [[31.406,76.410],[31.420,76.432]] }
+    ],
+    interventions: [
+      { id:"BNL-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[31.420,76.432], capacity:7200000, cost:0,        recharge:216000000, status:"Completed" },
+      { id:"BNL-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[31.402,76.448], capacity:55000,   cost:3850000,  recharge:165000,    status:"Proposed"  },
+      { id:"BNL-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[31.440,76.424], capacity:10500,   cost:770000,   recharge:31500,     status:"Ongoing"   }
+    ]
+  },
+
+  pong_dam: {
+    name: "Pong Dam Catchment (Maharana Pratap Sagar)", label: "Pong Dam (HP-Kangra) — 5,880 MCM",
+    group: "Punjab & HP Dams",
+    id: "DAM-HP-KNG-PNG", center: [32.008, 76.063],
+    area_ha: 1248000, rainfall_mm: 1350, avg_slope: 9.2, soil_group: "A", curve_number: 60,
+    boundary: [[32.032,76.034],[32.048,76.076],[32.018,76.098],[31.986,76.082],[31.975,76.042],[31.998,76.020],[32.032,76.034]],
+    streams: [
+      { order: 3, coords: [[32.042,76.048],[32.024,76.058],[32.008,76.063],[31.992,76.074]] },
+      { order: 2, coords: [[32.046,76.069],[32.028,76.064],[32.008,76.063]] },
+      { order: 1, coords: [[31.994,76.041],[32.008,76.063]] }
+    ],
+    interventions: [
+      { id:"PNG-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[32.008,76.063], capacity:5880000, cost:0,        recharge:176400000, status:"Completed" },
+      { id:"PNG-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[31.990,76.078], capacity:40000,   cost:2800000,  recharge:120000,    status:"Proposed"  },
+      { id:"PNG-03", type:"Continuous Contour Trench",  zone:"Ridge",       order:1, coords:[32.044,76.046], capacity:6500,    cost:325000,   recharge:19500,     status:"Proposed"  }
+    ]
+  },
+
+  /* ── Uttarakhand Dams ── */
+  tehri_dam: {
+    name: "Tehri Dam Catchment", label: "Tehri Dam (UK-Tehri Garhwal) — 2,615 MCM",
+    group: "Uttarakhand Dams",
+    id: "DAM-UK-THR-TRD", center: [30.378, 78.482],
+    area_ha: 720000, rainfall_mm: 1850, avg_slope: 18.5, soil_group: "A", curve_number: 55,
+    boundary: [[30.402,78.452],[30.418,78.496],[30.388,78.518],[30.356,78.502],[30.345,78.460],[30.368,78.438],[30.402,78.452]],
+    streams: [
+      { order: 3, coords: [[30.412,78.466],[30.394,78.476],[30.378,78.482],[30.362,78.494]] },
+      { order: 2, coords: [[30.416,78.488],[30.398,78.482],[30.378,78.482]] },
+      { order: 1, coords: [[30.364,78.460],[30.378,78.482]] }
+    ],
+    interventions: [
+      { id:"TRD-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[30.378,78.482], capacity:2615000, cost:0,        recharge:78450000, status:"Completed" },
+      { id:"TRD-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[30.360,78.498], capacity:22000,   cost:1540000,  recharge:66000,    status:"Proposed"  },
+      { id:"TRD-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[30.396,78.474], capacity:5800,    cost:425000,   recharge:17400,    status:"Ongoing"   }
+    ]
+  },
+
+  /* ── Kerala Dams ── */
+  idukki_dam: {
+    name: "Idukki Arch Dam Catchment", label: "Idukki Dam (KL-Idukki) — 1,996 MCM",
+    group: "Kerala Dams",
+    id: "DAM-KL-IDK-IDK", center: [9.848, 76.974],
+    area_ha: 64000, rainfall_mm: 2850, avg_slope: 14.8, soil_group: "A", curve_number: 54,
+    boundary: [[9.872,76.946],[9.888,76.988],[9.858,77.010],[9.825,76.994],[9.815,76.952],[9.838,76.930],[9.872,76.946]],
+    streams: [
+      { order: 3, coords: [[9.882,76.960],[9.864,76.970],[9.848,76.974],[9.832,76.986]] },
+      { order: 2, coords: [[9.886,76.981],[9.868,76.976],[9.848,76.974]] },
+      { order: 1, coords: [[9.834,76.952],[9.848,76.974]] }
+    ],
+    interventions: [
+      { id:"IDK-01", type:"Arch Dam",                  zone:"Valley Floor", order:3, coords:[9.848,76.974], capacity:1996000, cost:0,        recharge:59880000, status:"Completed" },
+      { id:"IDK-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[9.830,76.990], capacity:14000,   cost:980000,   recharge:42000,    status:"Proposed"  },
+      { id:"IDK-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[9.866,76.968], capacity:3200,    cost:235000,   recharge:9600,     status:"Ongoing"   }
+    ]
+  },
+
+  banasura_sagar: {
+    name: "Banasura Sagar Dam Catchment", label: "Banasura Sagar (KL-Wayanad) — 209 MCM",
+    group: "Kerala Dams",
+    id: "DAM-KL-WND-BNS", center: [11.655, 76.022],
+    area_ha: 22500, rainfall_mm: 2400, avg_slope: 11.5, soil_group: "A", curve_number: 56,
+    boundary: [[11.678,75.994],[11.694,76.036],[11.664,76.058],[11.632,76.042],[11.622,76.000],[11.645,75.978],[11.678,75.994]],
+    streams: [
+      { order: 3, coords: [[11.688,76.008],[11.670,76.018],[11.655,76.022],[11.638,76.034]] },
+      { order: 2, coords: [[11.692,76.028],[11.674,76.024],[11.655,76.022]] },
+      { order: 1, coords: [[11.641,76.003],[11.655,76.022]] }
+    ],
+    interventions: [
+      { id:"BNS-K1", type:"Earthfill Dam",             zone:"Valley Floor", order:3, coords:[11.655,76.022], capacity:209000, cost:0,       recharge:6270000, status:"Completed" },
+      { id:"BNS-K2", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[11.672,76.015], capacity:2200,   cost:165000,  recharge:6600,    status:"Proposed"  },
+      { id:"BNS-K3", type:"Continuous Contour Trench",  zone:"Ridge",       order:1, coords:[11.686,76.006], capacity:2800,   cost:140000,  recharge:8400,    status:"Proposed"  }
+    ]
+  },
+
+  malampuzha_dam: {
+    name: "Malampuzha Dam Catchment", label: "Malampuzha Dam (KL-Palakkad) — 151.5 MCM",
+    group: "Kerala Dams",
+    id: "DAM-KL-PKD-MLP", center: [10.840, 76.708],
+    area_ha: 26200, rainfall_mm: 1680, avg_slope: 8.8, soil_group: "A", curve_number: 62,
+    boundary: [[10.864,76.680],[10.880,76.722],[10.850,76.744],[10.818,76.728],[10.808,76.688],[10.830,76.666],[10.864,76.680]],
+    streams: [
+      { order: 3, coords: [[10.874,76.694],[10.856,76.704],[10.840,76.708],[10.823,76.720]] },
+      { order: 2, coords: [[10.878,76.715],[10.860,76.710],[10.840,76.708]] },
+      { order: 1, coords: [[10.826,76.688],[10.840,76.708]] }
+    ],
+    interventions: [
+      { id:"MLP-01", type:"Reservoir Dam",             zone:"Valley Floor", order:3, coords:[10.840,76.708], capacity:151500, cost:0,       recharge:4545000, status:"Completed" },
+      { id:"MLP-02", type:"Percolation Tank",           zone:"Valley Floor", order:3, coords:[10.822,76.724], capacity:8500,   cost:595000,  recharge:25500,   status:"Proposed"  },
+      { id:"MLP-03", type:"Gabion Check Dam",           zone:"Mid-Slope",   order:2, coords:[10.858,76.700], capacity:2800,   cost:205000,  recharge:8400,    status:"Ongoing"   }
     ]
   },
 
@@ -334,6 +831,200 @@ function initGISMap() {
 
   // Initial load of global dams in current view
   setTimeout(loadDamsInView, 800);
+}
+
+/* =========================================================================
+   LOAD DAMS IN VIEW — Overpass API live layer
+   ========================================================================= */
+let _osmDamMarkers = [];
+let _osmDamLoadTimer = null;
+
+function loadDamsInView() {
+  const map = window.watershedMap;
+  if (!map) return;
+
+  // Throttle: only fire once per 1200 ms after map stops moving
+  clearTimeout(_osmDamLoadTimer);
+  _osmDamLoadTimer = setTimeout(async () => {
+    const bounds = map.getBounds();
+    const zoom = map.getZoom();
+
+    // Only load OSM dams if zoomed in enough (avoids too many results)
+    if (zoom < 7) {
+      // At low zoom, show WATERSHED_DB markers as overview pins
+      _renderWatershedDBPins();
+      return;
+    }
+
+    const bbox = `${bounds.getSouth()},${bounds.getWest()},${bounds.getNorth()},${bounds.getEast()}`;
+    const query = `[out:json][timeout:15];(
+      node["waterway"="dam"](${bbox});
+      way["waterway"="dam"](${bbox});
+      relation["waterway"="dam"](${bbox});
+      node["water"="reservoir"](${bbox});
+      way["water"="reservoir"](${bbox});
+    );out center 40;`;
+
+    try {
+      const r = await fetch('https://overpass-api.de/api/interpreter', {
+        method: 'POST',
+        body: 'data=' + encodeURIComponent(query)
+      });
+      const d = await r.json();
+      _renderOSMDams(d.elements ?? []);
+    } catch(e) {
+      // Silently ignore network failures — map still works with WATERSHED_DB
+    }
+  }, 1200);
+}
+
+function _clearOSMDamMarkers() {
+  const map = window.watershedMap;
+  if (!map) return;
+  _osmDamMarkers.forEach(m => map.removeLayer(m));
+  _osmDamMarkers = [];
+}
+
+function _renderOSMDams(elements) {
+  const map = window.watershedMap;
+  if (!map) return;
+
+  _clearOSMDamMarkers();
+  if (!window._osmDamCache) window._osmDamCache = {};
+
+  elements.forEach(el => {
+    const lat = el.center ? el.center.lat : el.lat;
+    const lng = el.center ? el.center.lon : el.lon;
+    if (!lat || !lng) return;
+
+    const name = el.tags?.name || el.tags?.waterway || 'Unnamed Dam/Reservoir';
+    const key = 'osm_' + el.id;
+
+    // Cache for dropdown lookup
+    window._osmDamCache[key] = { lat, lng, name, tags: el.tags || {} };
+
+    const icon = L.divIcon({
+      className: '',
+      html: `<div style="
+        background: linear-gradient(135deg,#0ea5e9,#0284c7);
+        width:22px; height:22px; border-radius:50%;
+        border:2px solid #fff;
+        box-shadow: 0 0 8px #0ea5e9;
+        display:flex; align-items:center; justify-content:center;
+        color:#fff; font-size:9px; font-weight:700;
+        font-family:sans-serif; cursor:pointer;
+      ">🌊</div>`,
+      iconSize: [22, 22],
+      iconAnchor: [11, 11]
+    });
+
+    const marker = L.marker([lat, lng], { icon }).addTo(map);
+    marker.bindPopup(`
+      <div style="font-weight:700;font-size:12px;color:#0ea5e9;margin-bottom:4px;">${name}</div>
+      <div style="font-size:11px;color:#64748b;">
+        ${el.tags?.water ? 'Type: ' + el.tags.water : ''}
+        ${el.tags?.['reservoir:type'] ? ' | ' + el.tags['reservoir:type'] : ''}
+      </div>
+      <div style="font-size:10px;margin-top:4px;color:#94a3b8;">
+        ${lat.toFixed(4)}°N, ${lng.toFixed(4)}°E
+      </div>
+      <div style="margin-top:6px;">
+        <a href="https://www.openstreetmap.org/${el.type}/${el.id}" target="_blank"
+           style="font-size:10px;color:#10b981;">View on OSM ↗</a>
+      </div>
+    `);
+    _osmDamMarkers.push(marker);
+
+    // Add to dropdown if not already there
+    _appendOSMOptionToSelect(key, name);
+  });
+}
+
+function _renderWatershedDBPins() {
+  // At very low zoom levels, WATERSHED_DB entries are shown on map automatically
+  // via drawWatershedFeatures — no extra pins needed
+}
+
+function _appendOSMOptionToSelect(key, label) {
+  const sel = document.getElementById('watershed-select');
+  if (!sel) return;
+  if (sel.querySelector(`option[value="${key}"]`)) return; // already exists
+
+  let og = sel.querySelector('optgroup[label="OSM Live Dams"]');
+  if (!og) {
+    og = document.createElement('optgroup');
+    og.label = 'OSM Live Dams';
+    sel.appendChild(og);
+  }
+  const opt = document.createElement('option');
+  opt.value = key;
+  opt.textContent = '🌊 ' + label;
+  og.appendChild(opt);
+}
+
+/* =========================================================================
+   LOAD OSM DAM by cache key (called from dropdown select)
+   ========================================================================= */
+function loadOsmDam(damData) {
+  const map = window.watershedMap;
+  if (!map) return;
+  map.setView([damData.lat, damData.lng], 14);
+  showMapToast('🌊 OSM Dam: ' + damData.name);
+}
+
+/* =========================================================================
+   GLOBAL DAM SEARCH — queries Overpass + filters WATERSHED_DB
+   ========================================================================= */
+async function searchGlobalDams(term) {
+  const sel = document.getElementById('watershed-select');
+  if (!sel) return;
+
+  // 1. Filter local WATERSHED_DB first (instant)
+  filterWatershedOptions(term.toLowerCase());
+
+  // 2. Search Overpass API for dams matching the name
+  const query = `[out:json][timeout:12];(
+    node["waterway"="dam"]["name"~"${term}",i];
+    way["waterway"="dam"]["name"~"${term}",i];
+    node["water"="reservoir"]["name"~"${term}",i];
+    way["water"="reservoir"]["name"~"${term}",i];
+  );out center 15;`;
+
+  try {
+    const r = await fetch('https://overpass-api.de/api/interpreter', {
+      method: 'POST',
+      body: 'data=' + encodeURIComponent(query)
+    });
+    const d = await r.json();
+    const elements = d.elements ?? [];
+
+    if (!window._osmDamCache) window._osmDamCache = {};
+
+    elements.forEach(el => {
+      const lat = el.center ? el.center.lat : el.lat;
+      const lng = el.center ? el.center.lon : el.lon;
+      if (!lat || !lng) return;
+      const name = el.tags?.name || 'Unnamed Dam';
+      const key = 'osm_' + el.id;
+      window._osmDamCache[key] = { lat, lng, name, tags: el.tags || {} };
+      _appendOSMOptionToSelect(key, name);
+    });
+
+    // Auto-select first OSM result if no local match found
+    if (elements.length > 0) {
+      const firstKey = 'osm_' + elements[0].id;
+      const el0 = elements[0];
+      const lat = el0.center ? el0.center.lat : el0.lat;
+      const lng = el0.center ? el0.center.lon : el0.lon;
+      if (lat && lng && window.watershedMap) {
+        // Fly to the result on map
+        window.watershedMap.flyTo([lat, lng], 13, { duration: 1.4 });
+        showMapToast('🔍 Found: ' + (el0.tags?.name || 'Dam'));
+      }
+    }
+  } catch(e) {
+    // Silently ignore — local filter still works
+  }
 }
 
 /* -------------------------------------------------------------------------
