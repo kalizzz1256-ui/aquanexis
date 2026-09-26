@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AQUANEXIS – GIS-Based Watershed Development Decision Support System</title>
+  <title>AQUANEXIS– GIS-Based Watershed Development Decision Support System</title>
   <meta name="description"
     content="State-of-the-art GIS decision support platform for sustainable watershed planning, hydrological runoff simulation, Ridge-to-Valley intervention siting, and solar energy estimation.">
 
@@ -26,6 +26,9 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- QR Code Generator -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
@@ -1214,7 +1217,140 @@
 
           <!-- KRS / Kaveri Dam -->
           <div class="dam-card" id="dam-krs" onclick="flyToDam('krs')"
-            style="cursor:pointer;border-radius:12px;border:2px solid rgba(2,132,199,.2);background:#fff;padding:0;overflow:hidden;transition:border-color .25s,box-shadow .25s;box-shadow:0 2px 12px rgba(2,132,199,.07);">
+            style="cursor:pointer;border-radius:14px;border:1.5px solid rgba(56,189,248,.25);background:#0d0d0d;padding:0;overflow:hidden;transition:all .3s;box-shadow:0 4px 24px rgba(0,0,0,.5);">
+            <div style="background:linear-gradient(135deg,#0c2a42,#0369a1);padding:.75rem 1rem;display:flex;align-items:center;gap:.6rem;">
+              <span style="font-size:1.4rem;">🏛️</span>
+              <div>
+                <div style="font-weight:700;color:#e2e8f0;font-size:.92rem;">Krishnaraja Sagara (KRS)</div>
+                <div style="font-size:.75rem;color:#7dd3fc;">Karnataka &nbsp;|&nbsp; Kaveri River</div>
+              </div>
+            </div>
+            <div style="padding:.75rem 1rem;">
+              <div class="dam-stat-row"><span>Capacity</span><strong>49.45 TMC</strong></div>
+              <div class="dam-stat-row"><span>FRL</span><strong>124.8 ft (38.0 m)</strong></div>
+              <div class="dam-stat-row"><span>Catchment</span><strong>11,616 km²</strong></div>
+              <div class="dam-stat-row"><span>Height / Length</span><strong>39.6 m / 2,621 m</strong></div>
+              <div class="dam-stat-row"><span>Commissioned</span><strong>1932</strong></div>
+              <div class="dam-stat-row"><span>Purpose</span><strong>Irrigation + Bengaluru Water</strong></div>
+              <div style="margin-top:.6rem;">
+                <div style="font-size:.7rem;color:#64748b;font-family:'Courier New',monospace;margin-bottom:.25rem;">Storage level</div>
+                <div style="height:7px;background:#1e293b;border-radius:4px;overflow:hidden;">
+                  <div style="width:56.2%;height:100%;background:linear-gradient(90deg,#0369a1,#38bdf8);border-radius:4px;"></div>
+                </div>
+                <div style="font-size:.72rem;color:#38bdf8;margin-top:.2rem;font-family:'Courier New',monospace;">56.2% &nbsp;(27.8 TMC live)</div>
+              </div>
+              <!-- KRS Geo Satellite Photos -->
+              <div style="margin-top:.9rem;border-top:1px solid #1e293b;padding-top:.75rem;">
+                <div style="font-size:.68rem;color:#38bdf8;font-family:'Courier New',monospace;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.45rem;">🛰️ Geo Imagery — Before &amp; After</div>
+                <div style="display:flex;gap:.35rem;margin-bottom:.45rem;">
+                  <button id="krs-btn-before" onclick="event.stopPropagation();showDamPhoto('krs','before')"
+                    style="flex:1;padding:.3rem .4rem;border-radius:6px;border:1.5px solid #0369a1;background:#0369a1;color:#fff;font-size:.7rem;font-weight:700;cursor:pointer;font-family:'Segoe UI',sans-serif;transition:all .2s;">📍 Before (Pre-1932)</button>
+                  <button id="krs-btn-after" onclick="event.stopPropagation();showDamPhoto('krs','after')"
+                    style="flex:1;padding:.3rem .4rem;border-radius:6px;border:1.5px solid #1e293b;background:#111;color:#38bdf8;font-size:.7rem;font-weight:700;cursor:pointer;font-family:'Segoe UI',sans-serif;transition:all .2s;">🌊 After (Post-1932)</button>
+                </div>
+                <div id="krs-photo-before" style="position:relative;border-radius:8px;overflow:hidden;border:1.5px solid #1e3a5f;background:#000;">
+                  <img src="assets/krs_before.jpg" alt="Cauvery River valley before KRS dam" style="width:100%;height:125px;object-fit:cover;display:block;opacity:.92;" />
+                  <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent);font-size:.63rem;color:#7dd3fc;font-family:'Courier New',monospace;">📍 Pre-Dam: Dry Cauvery River valley (c.1920s)</div>
+                </div>
+                <div id="krs-photo-after" style="display:none;position:relative;border-radius:8px;overflow:hidden;border:1.5px solid #0369a1;background:#000;">
+                  <img src="assets/krs_after.jpg" alt="KRS Dam and reservoir satellite view" style="width:100%;height:125px;object-fit:cover;display:block;opacity:.92;" />
+                  <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:linear-gradient(0deg,rgba(2,105,161,.75),transparent);font-size:.63rem;color:#bae6fd;font-family:'Courier New',monospace;">🌊 KRS Reservoir — 49.45 TMC | Brindavan Gardens visible</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amaravathy Dam -->
+          <div class="dam-card" id="dam-amaravathy" onclick="flyToDam('amaravathy')"
+            style="cursor:pointer;border-radius:14px;border:1.5px solid rgba(16,185,129,.25);background:#0d0d0d;padding:0;overflow:hidden;transition:all .3s;box-shadow:0 4px 24px rgba(0,0,0,.5);">
+            <div style="background:linear-gradient(135deg,#052e16,#059669);padding:.75rem 1rem;display:flex;align-items:center;gap:.6rem;">
+              <span style="font-size:1.4rem;">💧</span>
+              <div>
+                <div style="font-weight:700;color:#e2e8f0;font-size:.92rem;">Amaravathy Dam</div>
+                <div style="font-size:.75rem;color:#6ee7b7;">Tamil Nadu &nbsp;|&nbsp; Amaravathy River</div>
+              </div>
+            </div>
+            <div style="padding:.75rem 1rem;">
+              <div class="dam-stat-row"><span>Capacity</span><strong>3 TMC</strong></div>
+              <div class="dam-stat-row"><span>FRL</span><strong>90.00 ft</strong></div>
+              <div class="dam-stat-row"><span>Catchment</span><strong>9.31 km²</strong></div>
+              <div class="dam-stat-row"><span>Height / Length</span><strong>33.5 m / 1,650 m</strong></div>
+              <div class="dam-stat-row"><span>Commissioned</span><strong>1957</strong></div>
+              <div class="dam-stat-row"><span>Purpose</span><strong>Agricultural (Karur, Tiruppur)</strong></div>
+              <div style="margin-top:.6rem;">
+                <div style="font-size:.7rem;color:#64748b;font-family:'Courier New',monospace;margin-bottom:.25rem;">Storage level</div>
+                <div style="height:7px;background:#1e293b;border-radius:4px;overflow:hidden;">
+                  <div style="width:42%;height:100%;background:linear-gradient(90deg,#059669,#34d399);border-radius:4px;"></div>
+                </div>
+                <div style="font-size:.72rem;color:#34d399;margin-top:.2rem;font-family:'Courier New',monospace;">42% &nbsp;(1.26 TMC live)</div>
+              </div>
+              <!-- Amaravathy Geo Satellite Photos -->
+              <div style="margin-top:.9rem;border-top:1px solid #1e293b;padding-top:.75rem;">
+                <div style="font-size:.68rem;color:#10b981;font-family:'Courier New',monospace;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.45rem;">🛰️ Geo Imagery — Before &amp; After</div>
+                <div style="display:flex;gap:.35rem;margin-bottom:.45rem;">
+                  <button id="amara-btn-before" onclick="event.stopPropagation();showDamPhoto('amara','before')"
+                    style="flex:1;padding:.3rem .4rem;border-radius:6px;border:1.5px solid #059669;background:#059669;color:#fff;font-size:.7rem;font-weight:700;cursor:pointer;font-family:'Segoe UI',sans-serif;transition:all .2s;">📍 Before (Pre-1957)</button>
+                  <button id="amara-btn-after" onclick="event.stopPropagation();showDamPhoto('amara','after')"
+                    style="flex:1;padding:.3rem .4rem;border-radius:6px;border:1.5px solid #1e293b;background:#111;color:#10b981;font-size:.7rem;font-weight:700;cursor:pointer;font-family:'Segoe UI',sans-serif;transition:all .2s;">🌊 After (Post-1957)</button>
+                </div>
+                <div id="amara-photo-before" style="position:relative;border-radius:8px;overflow:hidden;border:1.5px solid #1a3a2a;background:#000;">
+                  <img src="assets/amaravathy_before.jpg" alt="Amaravathy River valley before dam" style="width:100%;height:125px;object-fit:cover;display:block;opacity:.92;" />
+                  <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent);font-size:.63rem;color:#6ee7b7;font-family:'Courier New',monospace;">📍 Pre-Dam: Dry Amaravathy valley (c.1950s)</div>
+                </div>
+                <div id="amara-photo-after" style="display:none;position:relative;border-radius:8px;overflow:hidden;border:1.5px solid #059669;background:#000;">
+                  <img src="assets/amaravathy_after.jpg" alt="Amaravathy Dam reservoir satellite view" style="width:100%;height:125px;object-fit:cover;display:block;opacity:.92;" />
+                  <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:linear-gradient(0deg,rgba(5,150,105,.75),transparent);font-size:.63rem;color:#a7f3d0;font-family:'Courier New',monospace;">🌊 Amaravathy Reservoir — 3 TMC | FRL: 90 ft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bhavani Sagar Dam -->
+          <div class="dam-card" id="dam-mettur" onclick="flyToDam('mettur')"
+            style="cursor:pointer;border-radius:14px;border:1.5px solid rgba(245,158,11,.25);background:#0d0d0d;padding:0;overflow:hidden;transition:all .3s;box-shadow:0 4px 24px rgba(0,0,0,.5);">
+            <div style="background:linear-gradient(135deg,#2d1a00,#b45309);padding:.75rem 1rem;display:flex;align-items:center;gap:.6rem;">
+              <span style="font-size:1.4rem;">🌊</span>
+              <div>
+                <div style="font-weight:700;color:#e2e8f0;font-size:.92rem;">Bhavani Sagar Dam</div>
+                <div style="font-size:.75rem;color:#fde68a;">Tamil Nadu &nbsp;|&nbsp; Bhavani River</div>
+              </div>
+            </div>
+            <div style="padding:.75rem 1rem;">
+              <div class="dam-stat-row"><span>Capacity</span><strong>32.8 TMC</strong></div>
+              <div class="dam-stat-row"><span>FRL</span><strong>105.0 ft (32.0 m)</strong></div>
+              <div class="dam-stat-row"><span>Catchment</span><strong>1,850 km²</strong></div>
+              <div class="dam-stat-row"><span>Height / Length</span><strong>130 ft / 10,700 ft</strong></div>
+              <div class="dam-stat-row"><span>Commissioned</span><strong>1955</strong></div>
+              <div class="dam-stat-row"><span>Purpose</span><strong>Irrigation + Hydroelectric Power</strong></div>
+              <div style="margin-top:.6rem;">
+                <div style="font-size:.7rem;color:#64748b;font-family:'Courier New',monospace;margin-bottom:.25rem;">Storage level</div>
+                <div style="height:7px;background:#1e293b;border-radius:4px;overflow:hidden;">
+                  <div style="width:16.5%;height:100%;background:linear-gradient(90deg,#b45309,#fbbf24);border-radius:4px;"></div>
+                </div>
+                <div style="font-size:.72rem;color:#fbbf24;margin-top:.2rem;font-family:'Courier New',monospace;">16.5% &nbsp;(5.4 TMC live)</div>
+              </div>
+              <!-- Bhavani Geo Satellite Photos -->
+              <div style="margin-top:.9rem;border-top:1px solid #1e293b;padding-top:.75rem;">
+                <div style="font-size:.68rem;color:#f59e0b;font-family:'Courier New',monospace;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.45rem;">🛰️ Geo Imagery — Before &amp; After</div>
+                <div style="display:flex;gap:.35rem;margin-bottom:.45rem;">
+                  <button id="bhav-btn-before" onclick="event.stopPropagation();showDamPhoto('bhav','before')"
+                    style="flex:1;padding:.3rem .4rem;border-radius:6px;border:1.5px solid #b45309;background:#b45309;color:#fff;font-size:.7rem;font-weight:700;cursor:pointer;font-family:'Segoe UI',sans-serif;transition:all .2s;">📍 Before (Pre-1955)</button>
+                  <button id="bhav-btn-after" onclick="event.stopPropagation();showDamPhoto('bhav','after')"
+                    style="flex:1;padding:.3rem .4rem;border-radius:6px;border:1.5px solid #1e293b;background:#111;color:#f59e0b;font-size:.7rem;font-weight:700;cursor:pointer;font-family:'Segoe UI',sans-serif;transition:all .2s;">🌊 After (Post-1955)</button>
+                </div>
+                <div id="bhav-photo-before" style="position:relative;border-radius:8px;overflow:hidden;border:1.5px solid #3a2000;background:#000;">
+                  <img src="assets/bhavani_before.jpg" alt="Bhavani River valley before dam" style="width:100%;height:125px;object-fit:cover;display:block;opacity:.92;" />
+                  <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent);font-size:.63rem;color:#fde68a;font-family:'Courier New',monospace;">📍 Pre-Dam: Dry Bhavani River gorge (c.1948)</div>
+                </div>
+                <div id="bhav-photo-after" style="display:none;position:relative;border-radius:8px;overflow:hidden;border:1.5px solid #b45309;background:#000;">
+                  <img src="assets/bhavani_after.jpg" alt="Bhavani Sagar Dam reservoir satellite" style="width:100%;height:125px;object-fit:cover;display:block;opacity:.92;" />
+                  <div style="position:absolute;bottom:0;left:0;right:0;padding:.3rem .5rem;background:linear-gradient(0deg,rgba(180,83,9,.75),transparent);font-size:.63rem;color:#fed7aa;font-family:'Courier New',monospace;">🌊 Bhavani Sagar Reservoir — 32.8 TMC | Hydro Power</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /3 cards -->
+
             <div
               style="background:linear-gradient(135deg,#0369a1,#0284c7);padding:.7rem 1rem;display:flex;align-items:center;gap:.6rem;">
               <span style="font-size:1.4rem;">🏛️</span>
@@ -1346,7 +1482,26 @@
 
         <!-- Detail flyout panel (shown on card click) -->
         <div id="dam-detail-bar"
-          style="display:none;background:#f0f9ff;border:1.5px solid rgba(2,132,199,.25);border-radius:10px;padding:.85rem 1.2rem;margin-bottom:.5rem;">
+          style="display:none;background:#111;border:1.5px solid rgba(16,185,129,.25);border-radius:10px;padding:.85rem 1.2rem;margin-bottom:.5rem;">
+          <div style="display:flex;align-items:flex-start;gap:1.2rem;flex-wrap:wrap;">
+            <div id="dam-detail-icon" style="font-size:2.2rem;">🏛️</div>
+            <div style="flex:1;min-width:200px;">
+              <div id="dam-detail-title" style="font-weight:700;font-size:1rem;color:#e2e8f0;"></div>
+              <div id="dam-detail-meta" style="font-size:.78rem;color:#38bdf8;font-family:'Courier New',monospace;margin-top:.15rem;"></div>
+              <div id="dam-detail-desc" style="font-size:.82rem;color:#94a3b8;margin-top:.4rem;line-height:1.55;"></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:.35rem;min-width:180px;">
+              <div style="font-size:.72rem;color:#64748b;font-family:'Courier New',monospace;font-weight:700;text-transform:uppercase;letter-spacing:.05em;">Coordinates</div>
+              <div id="dam-detail-coords" style="font-size:.82rem;color:#38bdf8;font-family:'Courier New',monospace;"></div>
+              <button id="dam-flyto-btn"
+                style="margin-top:.3rem;padding:.4rem .9rem;border-radius:6px;border:1.5px solid #059669;background:#0a0a0a;color:#10b981;font-size:.8rem;font-weight:600;cursor:pointer;font-family:'Segoe UI',sans-serif;"
+                onclick="triggerDamAnalysis()">
+                🛰️ Analyse Watershed at Dam Site
+              </button>
+            </div>
+          </div>
+        </div>
+
           <div style="display:flex;align-items:flex-start;gap:1.2rem;flex-wrap:wrap;">
             <div id="dam-detail-icon" style="font-size:2.2rem;">🏛️</div>
             <div style="flex:1;min-width:200px;">
@@ -1374,9 +1529,9 @@
 
       <style>
         .dam-card:hover {
-          border-color: rgba(2, 132, 199, .5) !important;
-          box-shadow: 0 6px 24px rgba(2, 132, 199, .14) !important;
-          transform: translateY(-2px);
+          border-color: rgba(16,185,129,.5) !important;
+          box-shadow: 0 8px 32px rgba(0,0,0,.6) !important;
+          transform: translateY(-3px);
         }
 
         .dam-stat-row {
@@ -1384,7 +1539,7 @@
           justify-content: space-between;
           align-items: center;
           padding: .25rem 0;
-          border-bottom: 1px solid #f1f5f9;
+          border-bottom: 1px solid #1e293b;
           font-size: .8rem;
         }
 
@@ -1393,7 +1548,7 @@
         }
 
         .dam-stat-row strong {
-          color: #0c1a2e;
+          color: #cbd5e1;
           font-family: 'Courier New', monospace;
           font-size: .78rem;
         }
@@ -2972,7 +3127,19 @@
       </div>
 
       <div
-        style="display:flex; justify-content:flex-end; gap:1rem; margin-top:1.5rem; border-top:1px solid var(--border-subtle); padding-top:1.25rem;">
+        style="display:flex; justify-content:flex-end; gap:1rem; margin-top:1.5rem; border-top:1px solid rgba(16,185,129,.15); padding-top:1.25rem; flex-wrap:wrap;">
+        <button class="btn btn-outline" onclick="generateDPRQRCode()" style="border-color:#a78bfa;color:#a78bfa;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            <rect x="14" y="14" width="3" height="3"></rect>
+            <rect x="18" y="18" width="3" height="3"></rect>
+            <rect x="18" y="14" width="3" height="1"></rect>
+            <rect x="14" y="18" width="1" height="3"></rect>
+          </svg>
+          Generate QR Code
+        </button>
         <button class="btn btn-outline" id="btn-download-json">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -2997,32 +3164,32 @@
   <script src="app.js"></script>
 
   <script>
-    /* ── Amaravathy Dam: Before/After geo-photo toggle ── */
-    function showAmaraPhoto(which) {
-      var before = document.getElementById('amara-photo-before');
-      var after  = document.getElementById('amara-photo-after');
-      var btnBefore = document.getElementById('amara-btn-before');
-      var btnAfter  = document.getElementById('amara-btn-after');
+    /* ── Unified dam Before/After geo-photo toggle ── */
+    var DAM_PHOTO_CONFIG = {
+      krs:   { activeColor: '#0369a1', activeText: '#fff', inactiveText: '#38bdf8' },
+      amara: { activeColor: '#059669', activeText: '#fff', inactiveText: '#10b981' },
+      bhav:  { activeColor: '#b45309', activeText: '#fff', inactiveText: '#f59e0b' }
+    };
+
+    function showDamPhoto(prefix, which) {
+      var cfg = DAM_PHOTO_CONFIG[prefix] || DAM_PHOTO_CONFIG.amara;
+      var elBefore = document.getElementById(prefix + '-photo-before');
+      var elAfter  = document.getElementById(prefix + '-photo-after');
+      var btnBefore = document.getElementById(prefix + '-btn-before');
+      var btnAfter  = document.getElementById(prefix + '-btn-after');
+      if (!elBefore || !elAfter) return;
       if (which === 'before') {
-        before.style.display = 'block';
-        after.style.display  = 'none';
-        btnBefore.style.background = '#059669';
-        btnBefore.style.color      = '#fff';
-        btnBefore.style.borderColor = '#059669';
-        btnAfter.style.background  = '#f8fafc';
-        btnAfter.style.color       = '#059669';
-        btnAfter.style.borderColor = '#e2e8f0';
+        elBefore.style.display = 'block'; elAfter.style.display = 'none';
+        btnBefore.style.background = cfg.activeColor; btnBefore.style.color = cfg.activeText; btnBefore.style.borderColor = cfg.activeColor;
+        btnAfter.style.background = '#111'; btnAfter.style.color = cfg.inactiveText; btnAfter.style.borderColor = '#1e293b';
       } else {
-        before.style.display = 'none';
-        after.style.display  = 'block';
-        btnAfter.style.background = '#059669';
-        btnAfter.style.color      = '#fff';
-        btnAfter.style.borderColor = '#059669';
-        btnBefore.style.background  = '#f8fafc';
-        btnBefore.style.color       = '#059669';
-        btnBefore.style.borderColor = '#e2e8f0';
+        elBefore.style.display = 'none'; elAfter.style.display = 'block';
+        btnAfter.style.background = cfg.activeColor; btnAfter.style.color = cfg.activeText; btnAfter.style.borderColor = cfg.activeColor;
+        btnBefore.style.background = '#111'; btnBefore.style.color = cfg.inactiveText; btnBefore.style.borderColor = '#1e293b';
       }
     }
+    /* keep old name working too */
+    function showAmaraPhoto(which) { showDamPhoto('amara', which); }
 
     /* ── Dam card click: show detail flyout ── */
     var DAM_INFO = {
