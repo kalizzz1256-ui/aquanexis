@@ -103,3 +103,4 @@ streamlit run app.py
 
 ## 📜 License & Compliance
 Complies with Open Geospatial Consortium (OGC) specifications and Ministry of Jal Shakti guidelines for watershed development.
+# AQUA-NEXIS
